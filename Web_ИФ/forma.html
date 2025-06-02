@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИгроФабрика</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="логоИФ.png" type="image/png">
+    <script src="script.js"></script>
+  </head>
+
+  <body background="fon2.png">
+    <div class="forma">
+      <h1>Хотите вступить в ИгроФабику? Тогда скорее заполняйте форму ниже 👇</h1>
+      
+      <p>Фамилия</p>
+      <input class="name" type="text" name="regist" value="">
+      
+      <p>Имя</p>
+      <input type="text" name="regist" value="">
+      
+      <p>Являюсь студентом:</p>
+      <div class="radio-group">
+        <input type="radio" id="course1" name="rad1" value="1" checked>
+        <label for="course1">1 курса бакалавриата</label>
+        
+        <input type="radio" id="course2" name="rad1" value="2">
+        <label for="course2">2 курса бакалавриата</label>
+        
+        <input type="radio" id="course3" name="rad1" value="3">
+        <label for="course3">3 курса бакалавриата</label>
+        
+        <input type="radio" id="course4" name="rad1" value="4">
+        <label for="course4">4 курса бакалавриата</label>
+        
+        <input type="radio" id="course5" name="rad1" value="5">
+        <label for="course5">магистратуры</label>
+
+        <input type="radio" id="course6" name="rad1" value="6">
+        <label for="course6">другое</label>
+      </div>
+      
+      <p>Увлекаюсь:</p>
+      <div class="checkbox-group">
+        <input type="checkbox" id="design" name="chb1" value="1" checked>
+        <label for="design">дизайном</label>
+        
+        <input type="checkbox" id="development" name="chb1" value="2">
+        <label for="development">разработкой</label>
+        
+        <input type="checkbox" id="video" name="chb1" value="3">
+        <label for="video">видеограми</label>
+        
+        <input type="checkbox" id="photo" name="chb1" value="4">
+        <label for="photo">фотографиями</label>
+      </div>
+      
+      <p>Обучаюсь в институте:</p>
+      <select name="list">
+        <option selected>ИТИ</option>
+        <option>ИПиП</option>
+        <option>ИИТ</option>
+        <option>другой</option>
+      </select>
+      
+      <p>Место для комментария при необходимости:</p>
+      <textarea name="resume" rows="5"></textarea>
+    </div>
+  </body> 
+</html>
+  

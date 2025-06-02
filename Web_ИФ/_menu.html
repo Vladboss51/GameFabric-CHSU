@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИгроФабрика</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="логоИФ.png" type="image/png">
+  </head>
+
+  <body style="overflow: hidden; background-color: rgb(255, 255, 255);" scrolling="no">
+    <div class="menuBox">
+      <a href="forma.html" target="_parent">
+        <img src="логоИФ.png" alt="ИгроФабрика" title="ИФ">
+      </a>
+      <ul class="menuNav">
+        <li ><a href="fabric.html"   target="_parent" class="menu-link">Главная</a></li>
+        <li ><a href="news.html"     target="_parent" class="menu-link">Новости</a></li>
+        <li ><a href="activ.html"    target="_parent" class="menu-link">Мероприятия</a></li>
+        <li ><a href="projects.html" target="_parent" class="menu-link">Проекты</a></li>
+        <li ><a href="links.html"    target="_parent" class="menu-link">О нас</a></li>
+      </ul>
+    </div>
+    <script>
+      window.addEventListener('message', function(event) {
+        const currentPage = event.data;
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        menuLinks.forEach(link => {
+          const linkPage = link.getAttribute('href');
+          if (linkPage === currentPage) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body> 
+</html>
