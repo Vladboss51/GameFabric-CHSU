@@ -22,6 +22,7 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
 const iframe = document.querySelector('iframe');
 iframe.onload = function() {
     const currentPage = window.location.pathname.split('/').pop();
