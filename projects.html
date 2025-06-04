@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
@@ -11,7 +10,13 @@
   </head>
 
   <body background="img/fon2.png">
-    <iframe src="menu.html" class="menuFrame"></iframe>
+    <iframe src="menu-desktop.html" class="desktop-menu"></iframe>
+    <iframe src="menu-mobile.html" class="mobile-menu" id="mob-menu" scrolling="no" loading="lazy"></iframe>
+    <button id="mobile-menu-btn" class="mobile-menu-btn">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
     <button class="back-to-top" title="Наверх">↑</button>
 
     <h1>Проекты ИФ</h1>

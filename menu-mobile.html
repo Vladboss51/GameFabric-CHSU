@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ИгроФабрика</title>
+  <link rel="icon" href="img/логоИФ.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      overflow: hidden;
+      background-color: rgb(255, 255, 255);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .menuBox {
+      width: 100%;
+      max-width: 300px; /* Максимальная ширина меню */
+      padding: 20px;
+    }
+    
+    .menuNav {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px; /* Расстояние между пунктами */
+    }
+    
+    .menuNav li {
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+    
+    .menuNav a {
+      font-family: Arial, Helvetica, sans-serif;
+      display: block;
+      color: rgb(0, 0, 0);
+      padding: 12px 20px;
+      transition: all 0.3s ease;
+      border-radius: 25px;
+      background: rgba(240, 240, 240, 0.7);
+      backdrop-filter: blur(5px);
+      font-size: clamp(14px, 3vw, 18px); /* Адаптивный размер текста */
+    }
+    
+    .menuNav a:hover {
+      background-color: rgba(17, 255, 0, 0.665);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .menuNav a.active {
+      background-color: rgba(17, 255, 0, 0.3);
+      font-weight: bold;
+    }
+    
+    .menuNav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 2px;
+      background: #11ff00;
+    }
+    
+    /* Адаптация для очень маленьких экранов */
+    @media (max-width: 400px) {
+      .menuBox {
+        padding: 10px;
+      }
+      
+      .menuNav {
+        gap: 10px;
+      }
+      
+      .menuNav a {
+        padding: 10px 15px;
+      }
+    }
+    
+    /* Адаптация для высоких экранов */
+    @media (min-height: 800px) {
+      .menuNav {
+        gap: 20px;
+      }
+      
+      .menuNav a {
+        padding: 15px 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menuBox">
+    <ul class="menuNav">
+      <li><a href="index.html" target="_parent" class="menu-link">Главная</a></li>
+      <li><a href="news.html" target="_parent" class="menu-link">Новости</a></li>
+      <li><a href="activ.html" target="_parent" class="menu-link">Мероприятия</a></li>
+      <li><a href="projects.html" target="_parent" class="menu-link">Проекты</a></li>
+      <li><a href="links.html" target="_parent" class="menu-link">О нас</a></li>
+    </ul>
+  </div>
+  
+  <script>
+    // Подсветка активной страницы
+    window.addEventListener('message', function(event) {
+      const currentPage = event.data;
+      const menuLinks = document.querySelectorAll('.menu-link');
+      
+      menuLinks.forEach(link => {
+        link.classList.remove('active');
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body> 
+</html>

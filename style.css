@@ -1,6 +1,6 @@
 body{
     background-size: 120%;
-    background-position: right;
+    background-position: top;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -46,7 +46,7 @@ a:link{
     color: orange;
 }
 img {
-    width: 30%;
+    width: 40%;
     height: auto;
     border-radius: 25px;
 }
@@ -74,26 +74,9 @@ a.button:hover {
     color:rgb(17, 255, 0);
 }
 
-.menuFrame {
-    background-color: white;
-    display: block;
-    position: fixed;
-    top: 8px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 35em;
-    height: 2.6em;
-    border-radius: 20px;
-    border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.393);
-    z-index: 1000;
-}
-
-
 .box p{
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.937);
+    background-color: rgb(0, 0, 0);
     border-radius: 5vw;
     font-size: 150%;
     margin: 1%;
@@ -102,7 +85,7 @@ a.button:hover {
     text-align: justify;
 }
 .box img {
-    width: 30%;
+    width: 40%;
     height: auto;
     margin-right: 20px;
     border-radius: 3vw;
@@ -212,5 +195,233 @@ footer {
 
 
 
+/* Основные стили контейнера */
+.links-to-forms-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стили карточки формы */
+.link-to-form-container {
+  perspective: 1000px;
+}
+
+.link-to-form {
+  display: block;
+  height: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none;
+  color: #333;
+  transform-style: preserve-3d;
+}
+
+/* Эффекты при наведении */
+.link-to-form:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.link-to-form:active {
+  transform: translateY(-2px);
+}
+
+/* Стили изображения */
+.link-to-form img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #f0f0f0;
+  transition: transform 0.4s;
+}
+
+.link-to-form:hover img {
+  transform: scale(1.05);
+}
+
+/* Стили текста */
+.link-to-form p {
+  padding: 20px;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+  position: relative;
+}
+
+/* Индикатор формы */
+.link-to-form p::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link-to-form:hover p::after {
+  transform: scaleX(1);
+}
+
+/* Разные цвета для разных форм */
+.link-to-form-container:nth-child(1) .link-to-form p::after {
+  background: linear-gradient(90deg, #3498db, #2ecc71); /* Для вступления */
+}
+
+.link-to-form-container:nth-child(2) .link-to-form p::after {
+  background: linear-gradient(90deg, #e74c3c, #f39c12); /* Для обратной связи */
+}
+
+.link-to-form-container:nth-child(3) .link-to-form p::after {
+  background: linear-gradient(90deg, #9b59b6, #e74c3c); /* Для других целей */
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 900px) {
+  .links-to-forms-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 600px) {
+  .links-to-forms-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+  
+  .link-to-form img {
+    height: 150px;
+  }
+  
+  .link-to-form p {
+    padding: 15px;
+    font-size: 15px;
+  }
+}
+
+/* Анимация загрузки */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.link-to-form-container {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.link-to-form-container:nth-child(1) { animation-delay: 0.1s; }
+.link-to-form-container:nth-child(2) { animation-delay: 0.2s; }
+.link-to-form-container:nth-child(3) { animation-delay: 0.3s; }
+
+
+
+
+
+
+
+.desktop-menu {
+    background-color: white;
+    display: block;
+    position: fixed;
+    top: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 525px;
+    height: 42px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.393);
+    z-index: 1000;
+}
+
+
+
+
+
+/* Стили для кнопки бургера */
+.mobile-menu-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1001;
+  display: none; /* По умолчанию скрыта */
+}
+.mobile-menu-btn .burger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #000000;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+}
+/* Стили для мобильного меню */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 85%;
+  height: 100vh;
+  border: none;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(5px);
+  transition: left 0.3s ease-out;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
+/* Состояние открытого меню */
+.mobile-menu.active {
+  left: 0;
+}
+/* Анимация кнопки бургера */
+.mobile-menu-btn.active .burger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.mobile-menu-btn.active .burger-line:nth-child(2) {
+  opacity: 0;
+}
+.mobile-menu-btn.active .burger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+@media (max-width: 768px) {
+    /* Показываем кнопку только на мобильных */
+    .mobile-menu-btn {
+      display: block;
+    }
+    /* Картикнки на 100% только на мобильных */
+    .box img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    /* Показываем меню только на пк */
+    .desktop-menu {
+        display: none;
+    }
+}
 
 
