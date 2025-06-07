@@ -9,8 +9,38 @@
     <script src="script.js"></script>
   </head>
 
-  <body background="img/fon2.png">
-    <iframe src="menu-desktop.html" class="desktop-menu"></iframe>
+  <body>
+    <nav class="navbar">
+        <a href="forma_book.html" class="logo-link">
+            <img src="img/логоИФ.png" alt="Логотип ИгроФабрика" class="logo">
+        </a>
+        
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="index.html" class="menu-link">Главная</a>
+            </li>
+            <li class="menu-item">
+                <a href="news.html" class="menu-link">Новости</a>
+            </li>
+            <li class="menu-item">
+                <a href="activ.html" class="menu-link">Мероприятия</a>
+                <ul class="submenu">
+                    <li class="submenu-item">
+                        <a href="#" class="submenu-link">ОМУТ</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="#" class="submenu-link">ИФест</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="projects.html" class="menu-link">Проекты</a>
+            </li>
+            <li class="menu-item">
+                <a href="links.html" class="menu-link">О нас</a>
+            </li>
+        </ul>
+    </nav>
     <iframe src="menu-mobile.html" class="mobile-menu" id="mob-menu" scrolling="no" loading="lazy"></iframe>
     <button id="mobile-menu-btn" class="mobile-menu-btn">
       <span class="burger-line"></span>
@@ -21,23 +51,31 @@
 
     <h1>ИгроФабрика ЧГУ</h1>
     
-    <div class="box">
-      <p><img src="img/tetris.jpg">ИгроФабрике недавно исполнилось два года! Я считаю нужно поддержать развитие этого молодого клуба. Ведь именно тут студенты практикуются и прокачивают свои навыки в сфере разработки и не только. Участники ИгроФабрики - это довольно разносторонний народ. Тут можно встретить не только программистов, но и дизайнеров, музыкантов, креативных генераторов идей, пиарщиков, фотографов, ответственных организаторов различных мкроприятий и, конечно, любителей поиграть в видеогры в свободное время. Все эти студенты хотят всё больше и больше увеличивать свои познания в сфере IT, поэтому сейчас мы ищем возможность проведения для ребят интересных и познавательных мастер-классов от специалистов из разных сфер ИТ. Такие встречи дают не токльо новые знания, но и мотивацию работать над собой, чтобы добиться таких же успехов или стать даже лучше! Я считаю важно поддерживать огонь в глазах и сердцах студентов, благодаря чему они будут учиться не просто ради того чтобы кое как закрыть сессию, а ради своего светлого будущего, ради совершенстовования своих навыков для достижения глобальных целей. Если правильно замотивировать студентов, то они будут искать возможность обучения не только на учёбе, но во вне учебное время. И для этого как раз таки существует ИгроФабрика, которая рада активным студентам. А чтобы студенты могли развеятся, отвлечься ненадолго от учёбы, чтобы не перегореть, мы проводим захватывающие турниры, а также просто устраиваем посиделки для большей коммуникации студентов.</p>
+
+    <div class="hero-block">
+      <div class="hero-image">
+        <img src="img/джойстик.jpg" alt="Фоновое изображение">
+        <div class="hero-overlay">
+          <h3>Hello world</h3>
+          <p>Hello world</p>
+          <a href="#" class="hero-btn">Призыв к действию</a>
+        </div>
+      </div>
     </div>
 
     <div class="links-to-forms-container">
       <div class="link-to-form-container">
-        <a href="forma.html" target="_parent" class="link-to-form">
-          <img src="img/table.jpg" alt="ИФ" title="ИгроФабрика">
-          <p>Хочешь стать частью команды разработчиков, дизайнеров или киберспортсменов? Тогда скорее подавай заявку на вступление!</p>
+        <a href="forma_wellcome.html" target="_parent" class="link-to-form">
+          <img src="img/руки.jpg" alt="ИФ" title="ИгроФабрика">
+          <p>Хочешь создавать игры или организовывать киберспортивные турниры? Тогда скорее подавай заявку на вступление!</p>
         </a>
       </div>
       <div class="link-to-form-container">
-        <a href="forma.html" target="_parent" class="link-to-form">
-          <img src="img/table.jpg" alt="ИФ" title="ИгроФабрика">
+        <a href="forma_book.html" target="_parent" class="link-to-form">
+          <img src="img/угроза1.jpg" alt="ИФ" title="ИгроФабрика">
           <p>Если у тебя есть какие- то интересные предложения или замечания, то ты можешь изложить их в этой форме)</p>
         </a>
-      </div>   
+      </div>
     </div>
 
     <footer>
@@ -48,6 +86,7 @@
           <a href="https://www.twitch.tv/igrofabrika_chgu" class="social-link"><img src="img/twitch-logo.png"></a>
           <a href="https://discord.gg/T4S8QR8X" class="social-link"><img src="img/dc-logo.png"></a>
         </div>
+        <hr>
         <p>© 2025 студенческое объединение ЧГУ "ИгроФабрика". Все права защищены.</p>
       </div>
     </footer>

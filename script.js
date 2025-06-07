@@ -77,7 +77,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-
+    // Подсветка активной страницы
+    const currentPage = window.location.pathname.split('/').pop();
+    const menuLinks = document.querySelectorAll('.menu-link');
+    
+    menuLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        }
+    });
 
 
 });

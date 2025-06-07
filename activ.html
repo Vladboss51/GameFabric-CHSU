@@ -9,8 +9,38 @@
     <script src="script.js"></script>
   </head>
 
-  <body background="img/fon2.png">
-    <iframe src="menu-desktop.html" class="desktop-menu"></iframe>
+  <body>
+    <nav class="navbar">
+        <a href="forma_book.html" class="logo-link">
+            <img src="img/логоИФ.png" alt="Логотип ИгроФабрика" class="logo">
+        </a>
+        
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="index.html" class="menu-link">Главная</a>
+            </li>
+            <li class="menu-item">
+                <a href="news.html" class="menu-link">Новости</a>
+            </li>
+            <li class="menu-item">
+                <a href="activ.html" class="menu-link">Мероприятия</a>
+                <ul class="submenu">
+                    <li class="submenu-item">
+                        <a href="#" class="submenu-link">ОМУТ</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="#" class="submenu-link">ИФест</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="projects.html" class="menu-link">Проекты</a>
+            </li>
+            <li class="menu-item">
+                <a href="links.html" class="menu-link">О нас</a>
+            </li>
+        </ul>
+    </nav>
     <iframe src="menu-mobile.html" class="mobile-menu" id="mob-menu" scrolling="no" loading="lazy"></iframe>
     <button id="mobile-menu-btn" class="mobile-menu-btn">
       <span class="burger-line"></span>
@@ -20,17 +50,97 @@
     <button class="back-to-top" title="Наверх">↑</button>
 
     <h1>Мероприятия ИФ</h1>
-    <div class="box">
-      <p><b>16 мая 2025 г.</b> - турнир по тетрису. Эта легендарная игра закрывает наш ИФест. Время понастальгтровать! Призовой фонд 5к!!!</p>
-      <hr>
-      <p><b>14 мая 2025 г.</b> - турнир по Minecraft. Игра на все времена! Призовой фонд 5к!!!</p>
-      <hr>
-      <p><b>10-11 мая 2025 г.</b> - турнир по Dota 2 в онлайн формате. Призовой фонд 15к!!!</p>
-      <hr>
-      <p><b>23 апреля 2025 г.</b> - турнир по CS2 открывает ИФест. Призовой фонд 10к!!!</p>
-      <hr>
-      <p><b>27 февраля 2025 г.</b> - в ИгроФабрике прошли выборы нового председателя. Баллотировалось 2 кандидата, обучающихся на 1 и 2 курсе. Они подготовили презентации, в которых отразили свою краткую биографию и предвыборную программу. В итоге голосования с отрывом в 4 голоса победил кандидат с 1 курса - Поляков Владислав Дмитриевич.</p>
+
+    <div class="content-container">
+      <!-- Блок 1 (изображение слева) -->
+      <div class="content-block">
+        <div class="content-image">
+          <img src="img/tetris.jpg" alt="Описание изображения">
+        </div>
+        <div class="content-text">
+          <h2>Турнир по Тетрису</h2>
+          <p>Прошёл очно в дверях ЧГУ 16 мая 2025г. Эта легендарная игра стала заключительной в нашем ИФесте. Время понастальгтровать!</p>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">5 000</span>
+              <span class="stat-label">Призовой фонд</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1 х 1</span>
+              <span class="stat-label">Формат</span>
+            </div>
+          </div>
+          <a href="#" class="content-btn">Узнать больше</a>
+        </div>
+      </div>
+
+      <!-- Блок 2 (изображение справа) -->
+      <div class="content-block reversed">
+        <div class="content-image">
+          <img src="img/стол.jpg" alt="Описание изображения">
+        </div>
+        <div class="content-text">
+          <h2>Турнир по Minecraft</h2>
+          <p>Прошёл онлайн 14 мая 2025г. Игра на все времена!</p>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">5 000</span>
+              <span class="stat-label">Призовой фонд</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">Битва в бедроковой коробке</span>
+              <span class="stat-label">Формат</span>
+            </div>
+          </div>
+          <a href="#" class="content-btn">Подробнее</a>
+        </div>
+      </div>
+
+      <!-- Блок 3 (изображение слева) -->
+      <div class="content-block">
+        <div class="content-image">
+          <img src="img/tetris.jpg" alt="Описание изображения">
+        </div>
+        <div class="content-text">
+          <h2>Турнир по Dota 2</h2>
+          <p>Проходил онлайн 10-11 мая 2025г. Это были напряжённые выходные!</p>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">15 000</span>
+              <span class="stat-label">Призовой фонд</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5 х 5</span>
+              <span class="stat-label">Формат</span>
+            </div>
+          </div>
+          <a href="#" class="content-btn">Узнать больше</a>
+        </div>
+      </div>
+
+      <!-- Блок 4 (изображение справа) -->
+      <div class="content-block reversed">
+        <div class="content-image">
+          <img src="img/стол.jpg" alt="Описание изображения">
+        </div>
+        <div class="content-text">
+          <h2>Турнир по CS2</h2>
+          <p>Прошёл очно в игровом клубе <a href="https://vk.com/gamehousse?from=search">Game House</a> 23 апреля 2025г. В организации принимали участие ребята из проекта <a href="">Будущее Киберспорта</a>. Этот турнир стал открытием ИФеста!</p>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">10 000</span>
+              <span class="stat-label">Призовой фонд</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2 х 2</span>
+              <span class="stat-label">Формат</span>
+            </div>
+          </div>
+          <a href="#" class="content-btn">Смотреть проекты</a>
+        </div>
+      </div>
     </div>
+
 
 
     <footer>
@@ -41,6 +151,7 @@
           <a href="https://www.twitch.tv/igrofabrika_chgu" class="social-link"><img src="img/twitch-logo.png"></a>
           <a href="https://discord.gg/T4S8QR8X" class="social-link"><img src="img/dc-logo.png"></a>
         </div>
+        <hr>
         <p>© 2025 студенческое объединение ЧГУ "ИгроФабрика". Все права защищены.</p>
       </div>
     </footer>
