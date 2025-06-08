@@ -32,8 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mob-menu');
     
@@ -45,22 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Блокируем прокрутку тела страницы при открытом меню
         document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    });
-    
-    // Закрытие меню при клике вне его области
-    document.addEventListener('click', function(e) {
-        if (mobileMenu.classList.contains('active') && 
-            !e.target.closest('.mobile-menu') && 
-            !e.target.closest('.mobile-menu-btn')) {
-        closeMenu();
-        }
-    });
-    
-    // Закрытие меню при нажатии Esc
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-        closeMenu();
-        }
     });
     
     // Функция закрытия меню

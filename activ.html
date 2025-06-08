@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ИгроФабрика</title>
+    <title>Мероприятия | ИгроФабрика ЧГУ</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/логоИФ.png" type="image/png">
     <script src="script.js"></script>
@@ -26,10 +26,13 @@
                 <a href="activ.html" class="menu-link">Мероприятия</a>
                 <ul class="submenu">
                     <li class="submenu-item">
-                        <a href="#" class="submenu-link">ОМУТ</a>
+                        <a href="archive.html" class="submenu-link">Архив</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="#" class="submenu-link">ИФест</a>
+                        <a href="archive.html#ifest-2025" class="submenu-link">ИФест</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="archive.html#omut-autumn-2024" class="submenu-link">ОМУТ</a>
                     </li>
                 </ul>
             </li>
@@ -50,12 +53,21 @@
     <button class="back-to-top" title="Наверх">↑</button>
 
     <h1>Мероприятия ИФ</h1>
-
+    <h2 class="section-title active-events">Лайв-лобби</h2>
     <div class="content-container">
-      <!-- Блок 1 (изображение слева) -->
-      <div class="content-block">
+      <div class="no-events-message">
+        <div class="no-events-icon">🎮</div>
+        <h3>Сейчас тишина в лобби</h3>
+        <p>Активных турниров нет, но мы готовим новые баталии! Следи за анонсами.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title past-events">Прошедшие мероприятия</h2>
+    <div class="content-container">
+      <!-- Блок 0 (изображение справа) -->
+      <div class="content-block reversed">
         <div class="content-image">
-          <img src="img/tetris.jpg" alt="Описание изображения">
+          <img src="img/тетрис_победители2025.jpg" alt="Фоновое изображение">
         </div>
         <div class="content-text">
           <h2>Турнир по Тетрису</h2>
@@ -70,14 +82,14 @@
               <span class="stat-label">Формат</span>
             </div>
           </div>
-          <a href="#" class="content-btn">Узнать больше</a>
+          <a href="archive.html#cs2-2025" class="content-btn">Узнать больше</a>
         </div>
       </div>
 
-      <!-- Блок 2 (изображение справа) -->
-      <div class="content-block reversed">
+      <!-- Блок 1 (изображение слева) -->
+      <div class="content-block">
         <div class="content-image">
-          <img src="img/стол.jpg" alt="Описание изображения">
+          <img src="img/майнкрафт2025.jpg" alt="Фоновое изображение">
         </div>
         <div class="content-text">
           <h2>Турнир по Minecraft</h2>
@@ -92,14 +104,14 @@
               <span class="stat-label">Формат</span>
             </div>
           </div>
-          <a href="#" class="content-btn">Подробнее</a>
+          <a href="archive.html#minecraft-2025" class="content-btn">Подробнее</a>
         </div>
       </div>
 
-      <!-- Блок 3 (изображение слева) -->
-      <div class="content-block">
+      <!-- Блок 2 (изображение справа) -->
+      <div class="content-block reversed">
         <div class="content-image">
-          <img src="img/tetris.jpg" alt="Описание изображения">
+          <img src="img/дота2_2025.jpg" alt="Фоновое изображение">
         </div>
         <div class="content-text">
           <h2>Турнир по Dota 2</h2>
@@ -114,14 +126,14 @@
               <span class="stat-label">Формат</span>
             </div>
           </div>
-          <a href="#" class="content-btn">Узнать больше</a>
+          <a href="archive.html#dota2-2025" class="content-btn">Узнать больше</a>
         </div>
       </div>
 
-      <!-- Блок 4 (изображение справа) -->
-      <div class="content-block reversed">
+      <!-- Блок 3 (изображение слева) -->
+      <div class="content-block">
         <div class="content-image">
-          <img src="img/стол.jpg" alt="Описание изображения">
+          <img src="img/кс2_2025.jpg" alt="Фоновое изображение">
         </div>
         <div class="content-text">
           <h2>Турнир по CS2</h2>
@@ -136,23 +148,44 @@
               <span class="stat-label">Формат</span>
             </div>
           </div>
-          <a href="#" class="content-btn">Смотреть проекты</a>
+          <a href="archive.html#tetris-2025" class="content-btn">Смотреть проекты</a>
         </div>
       </div>
     </div>
 
 
 
-    <footer>
-      <div class="down">
-        <div class="social-links">
-          <a href="https://vk.com/igrofabrika_chsu?from=groups" class="social-link"><img src="img/vk-logo.png"></a>
-          <a href="https://www.youtube.com/@igrofabrika" class="social-link"><img src="img/youtube-logo.png"></a>
-          <a href="https://www.twitch.tv/igrofabrika_chgu" class="social-link"><img src="img/twitch-logo.png"></a>
-          <a href="https://discord.gg/T4S8QR8X" class="social-link"><img src="img/dc-logo.png"></a>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-social">
+          <a href="https://vk.com/igrofabrika_chsu?from=groups" class="social-icon" aria-label="ВКонтакте">
+            <svg class="social-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486 1.801-2.339 4.157-5.336 2.073-5.336h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539-.629-.145-1.241-.205-1.809-.205-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305-.241-.548-.315-.974-1.175-.974h-3.255c-.492 0-.787.16-.787.516 0 .602 2.96 6.72 5.786 9.77 2.756 2.975 5.48 2.708 7.376 2.708z"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@igrofabrika" class="social-icon" aria-label="YouTube">
+            <svg class="social-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"/>
+            </svg>
+          </a>
+          <a href="https://www.twitch.tv/igrofabrika_chgu" class="social-icon" aria-label="Twitch">
+            <svg class="social-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.64 5.93H13.07V10.21H11.64M15.57 5.93H17V10.21H15.57M7 2L3.43 5.57V18.43H7.71V22L11.29 18.43H14.14L20.57 12V2M19.14 11.29L16.29 14.14H13.43L10.93 16.64V14.14H7.71V3.43H19.14Z"/>
+            </svg>
+          </a>
+          <a href="mailto:igrofabrika.chsu@gmail.com" class="social-icon" aria-label="Почта">
+            <svg class="social-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z"/>
+            </svg>
+          </a>
         </div>
-        <hr>
-        <p>© 2025 студенческое объединение ЧГУ "ИгроФабрика". Все права защищены.</p>
+        
+        <div class="footer-divider"></div>
+        
+        <div class="footer-info">
+          <p class="footer-copyright">© 2025 студенческое объединение ЧГУ "ИгроФабрика". Все права защищены.</p>
+          <p class="footer-address">Череповецкий государственный университет</p>
+        </div>
       </div>
     </footer>
   </body> 

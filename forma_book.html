@@ -6,30 +6,26 @@
     <title>ИгроФабрика</title>
     <link rel="icon" href="img/логоИФ.png" type="image/png">
     <style>
-      /* Основные стили формы */
-        body {
-          background-size: 120%;
-          background-position: top;
-          height: 100%;
-          margin: 0;
-          padding: 0;
-        }
-
+      body {
+        background-size: 120%;
+        background-position: top;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
       .forma {
         max-width: 600px;
         margin: 2rem auto;
         padding: 2.5rem 3rem;
-        background: linear-gradient(145deg, #f8f9fa, #ffffff);
+        background: linear-gradient(to bottom, #1e5880, #1a7440);
         border-radius: 16px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
         border: 1px solid rgba(255, 255, 255, 0.2);
       }
-
-      /* Стили для заголовка */
       .forma h1 {
         font-size: 1.5rem;
-        color: #2c3e50;
+        color: #e7e7e7;
         margin-bottom: 1.5rem;
         margin-top: 1.5rem;
         text-align: center;
@@ -39,7 +35,6 @@
         padding-top: 10px;
         background: none;
       }
-
       .forma h1::after {
         content: "";
         position: absolute;
@@ -50,151 +45,25 @@
         height: 3px;
         background: linear-gradient(90deg, #3498db, #2ecc71);
       }
-
-      /* Стили для параграфов (вопросов) */
-      .forma p {
-        font-size: 1rem;
-        color: #34495e;
-        margin: 1.5rem 0 0.5rem 0;
-        font-weight: 500;
-      }
-
-      /* Стили для текстовых полей и select */
-      .forma input[type="text"],
-      .forma textarea,
-      .forma select {
+      .forma textarea {
         width: 100%;
-        padding: 12px 15px;
-        margin: 0.3rem 0 1rem;
+        min-height: 120px;
+        padding: 15px;
+        margin: 0.3rem 0 1.5rem;
         border: 2px solid #e0e0e0;
         border-radius: 8px;
         font-size: 1rem;
         transition: all 0.3s ease;
         background-color: rgba(255, 255, 255, 0.8);
         box-sizing: border-box;
+        resize: vertical;
       }
-
-      .forma input[type="text"]:focus,
-      .forma textarea:focus,
-      .forma select:focus {
+      .forma textarea:focus {
         border-color: #3498db;
         box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
         outline: none;
       }
-
-      /* Стили для select */
-      .forma select {
-        margin: 0.3rem 0 1.5rem;
-        appearance: none;
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-        background-repeat: no-repeat;
-        background-position: right 12px center;
-        background-size: 16px;
-        padding-right: 35px;
-      }
-
-      /* Стили для textarea */
-      .forma textarea {
-        width: 100%;
-        min-height: 120px;
-        margin: 0.3rem 0 1.5rem;
-        padding: 15px;
-        resize: vertical;
-      }
-
-      /* Стили для групп радио-кнопок и чекбоксов */
-      .forma .radio-group,
-      .forma .checkbox-group {
-        margin: 0.5rem 0 1.5rem;
-      }
-
-      /* Скрываем оригинальные input */
-      .forma input[type="radio"],
-      .forma input[type="checkbox"] {
-        position: absolute;
-        opacity: 0;
-        width: 0;
-        height: 0;
-      }
-
-      /* Стили для кастомных радио-кнопок и чекбоксов */
-      .forma .radio-group label,
-      .forma .checkbox-group label {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        margin-bottom: 12px;
-        position: relative;
-        padding-left: 32px;
-        min-height: 24px;
-        user-select: none;
-        font-weight: normal;
-        color: #2c3e50;
-        transition: color 0.2s;
-      }
-
-      /* Кастомный вид радио-кнопок */
-      .forma .radio-group label::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #bdc3c7;
-        border-radius: 50%;
-        transition: all 0.2s ease;
-      }
-
-      /* Кастомный вид чекбоксов */
-      .forma .checkbox-group label::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #bdc3c7;
-        border-radius: 4px;
-        transition: all 0.2s ease;
-      }
-
-      /* Состояние checked для радио-кнопок */
-      .forma input[type="radio"]:checked + label::before {
-        background-color: #3498db;
-        border-color: #3498db;
-        box-shadow: inset 0 0 0 4px white;
-      }
-
-      /* Состояние checked для чекбоксов */
-      .forma input[type="checkbox"]:checked + label::before {
-        background-color: #3498db;
-        border-color: #3498db;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
-        background-size: 14px;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-
-      /* Hover-эффекты */
-      .forma .radio-group label:hover,
-      .forma .checkbox-group label:hover {
-        color: #3498db;
-      }
-
-      .forma .radio-group label:hover::before,
-      .forma .checkbox-group label:hover::before {
-        border-color: #3498db;
-      }
-
-      /* Фокус-стили */
-      .forma input[type="radio"]:focus + label::before,
-      .forma input[type="checkbox"]:focus + label::before {
-        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
-      }
-
       .forma button[type="submit"] {
-        /* Основные стили */
         background: linear-gradient(135deg, #3498db, #2ecc71);
         color: white;
         border: none;
@@ -214,67 +83,34 @@
         position: relative;
         overflow: hidden;
       }
-
-      /* Эффект при наведении */
       .forma button[type="submit"]:hover {
         transform: translateY(-3px);
         box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
         background: linear-gradient(135deg, #2ecc71, #3498db);
       }
-
-      /* Эффект при нажатии */
       .forma button[type="submit"]:active {
         transform: translateY(1px);
         box-shadow: 0 2px 10px rgba(52, 152, 219, 0.5);
       }
-
       .forma button[type="submit"]:focus:not(:active)::after {
         animation: pulse 1s ease-out;
       }
-
-      /* Иконка загрузки (для AJAX отправки) */
-      .forma button[type="submit"].loading::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 20px;
-        height: 20px;
-        margin: -10px 0 0 -10px;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        border-top-color: white;
-        border-radius: 50%;
-        animation: spin 0.8s linear infinite;
-      }
-
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
-
-      /* Адаптивность */
       @media (max-width: 768px) {
         .forma {
           padding: 1.8rem;
           margin: 1rem;
         }
-        
         .forma h1 {
           font-size: 1.3rem;
-        }
-
-        .forma .radio-group,
-        .forma .checkbox-group {
-          margin: 0.5rem 0 1.2rem;
         }
       }
     </style>
   </head>
 
-  <body background="img/fon2.png">
+  <body background="img/Фон.jpg">
     <form action="https://formspree.io/f/xvgrgjll" method="post">
       <div class="forma">
         <h1>Хотите поделиться своими мыслями, идеями, впечатлениями от мероприятия или высказать жалобу? Тогда излагайте свой отзыв ниже 👇</h1>
-        
         <textarea name="resume" rows="5"></textarea>
         <button type="submit">Отправить</button>
       </div>
