@@ -1324,13 +1324,21 @@ h2::after {
 }
 
 @media (max-width: 768px) {
+  .content-container {
+    padding: 0 10px;
+  }
+  
   .filters {
-    padding: 15px;
-    gap: 12px;
+    padding: 12px 8px;
+    gap: 10px;
   }
   
   .filter-group {
     flex: 1 1 100%;
+  }
+  
+  .event-card {
+    padding: 15px 10px;
   }
   
   .event-header {
@@ -1347,34 +1355,37 @@ h2::after {
     gap: 8px;
   }
   
+  .discipline {
+    padding: 10px 8px;
+  }
+  
   .discipline-title {
     font-size: 1rem;
   }
   
-  .results-table {
-    display: block;
-    overflow-x: auto;
-    font-size: 0.8rem;
-  }
-  
   .photo-gallery {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 10px;
+    gap: 8px;
   }
   
   .comment {
     font-size: 0.85rem;
+    padding: 8px;
   }
 }
 
 @media (max-width: 480px) {
+  .content-container {
+    padding: 0 5px;
+  }
+  
   .filters {
-    padding: 12px;
+    padding: 10px 5px;
   }
   
   .event-card {
-    padding: 15px;
-    margin-bottom: 25px;
+    padding: 12px 8px;
+    margin-bottom: 20px;
   }
   
   .event-title {
@@ -1386,16 +1397,22 @@ h2::after {
   }
   
   .discipline {
-    padding: 10px;
+    padding: 8px 6px;
     margin: 15px 0;
   }
   
   .photo-gallery {
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: 6px;
   }
   
   .event-summary {
     font-size: 0.85rem;
+    padding: 10px 8px;
+  }
+  
+  .results-table th,
+  .results-table td {
+    padding: 6px;
   }
 }
