@@ -157,7 +157,6 @@ a:hover {
   padding-left: 20px;
 }
 
-
 /* Стили для кнопки бургера */
 .mobile-menu-btn {
   position: fixed;
@@ -165,7 +164,7 @@ a:hover {
   left: 15px;
   width: 50px;
   height: 50px;
-  background: rgba(255, 255, 255, 0.96);
+  background: var(--accent-green);
   border: none;
   border-radius: 50%;
   padding: 8px;
@@ -322,6 +321,18 @@ a:hover {
   }
   .footer-address {
     font-size: 12px;
+  }
+  /* Показываем кнопку только на мобильных */
+  .mobile-menu-btn {
+    display: block;
+  }
+  /* Показываем меню только на пк */
+  .navbar {
+    display: none;
+  }
+  /* Выравнивание заголовка */
+  h1 {
+    padding-top: 30px;
   }
 }
 
@@ -1082,7 +1093,6 @@ h2::after {
 
 
 /* Архив мероприятий */
-/* Фильтры */
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -1110,7 +1120,6 @@ h2::after {
   border-radius: 5px;
   color: var(--text-light);
 }
-/* Карточки мероприятий */
 .event-card {
   background: linear-gradient(to bottom, rgba(16, 49, 71, 0.5), rgba(15, 68, 37, 0.5));
   border-radius: 12px;
@@ -1166,7 +1175,6 @@ h2::after {
   font-size: 0.9rem;
   color: var(--text-light);
 }
-/* Подразделы (дисциплины) */
 .discipline {
   margin: 25px 0;
   padding: 15px;
@@ -1192,7 +1200,6 @@ h2::after {
   margin: 10px 0;
   font-size: 0.9rem;
 }
-/* Таблица результатов */
 .results-table {
   width: 100%;
   border-collapse: collapse;
@@ -1220,7 +1227,6 @@ h2::after {
 .results-table tr:nth-child(even) {
   background: rgba(255, 255, 255, 0.02);
 }
-/* Комментарии участников */
 .participant-comments {
   margin: 20px 0;
 }
@@ -1236,11 +1242,9 @@ h2::after {
   color: var(--accent-green);
   margin-bottom: 5px;
 }
-
 .event-card.omut .comment-author {
   color: var(--accent-blue);
 }
-/* Галерея фотографий */
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1263,7 +1267,6 @@ h2::after {
 .photo-item:hover img {
   transform: scale(1.05);
 }
-/* Итоги фестиваля */
 .event-summary {
   margin: 30px 0 15px;
   padding: 15px;
@@ -1275,35 +1278,59 @@ h2::after {
   border-left-color: var(--accent-blue);
 }
 @media (max-width: 768px) {
-  /* Показываем кнопку только на мобильных */
-  .mobile-menu-btn {
-    display: block;
+  .filters {
+    padding: 15px;
+    gap: 12px;
   }
-  /* Показываем меню только на пк */
-  .navbar {
-    display: none;
+  .filter-group {
+    flex: 1 1 100%;
   }
-  /* Выравнивание заголовка */
-  h1 {
-    padding-top: 30px;
-  }
-  /* Адаптивность для архива */
   .event-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 8px;
+  }
+  .event-title {
+    font-size: 1.3rem;
+  }
+  .event-meta {
+    gap: 8px;
+  }
+  .discipline-title {
+    font-size: 1rem;
+  }
+  .photo-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 10px;
   }
-  .results-table {
-    display: block;
-    overflow-x: auto;
-  }
-  .photo-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-}
-@media (max-width: 480px) {
-  .photo-gallery {
-    grid-template-columns: 1fr 1fr;
+  .comment {
+    font-size: 0.85rem;
   }
 }
 
+@media (max-width: 480px) {
+  .filters {
+    padding: 12px;
+  }
+  .event-card {
+    padding: 15px;
+    margin-bottom: 25px;
+  }
+  .event-title {
+    font-size: 1.2rem;
+  }
+  .meta-item {
+    font-size: 0.8rem;
+  } 
+  .discipline {
+    padding: 10px;
+    margin: 15px 0;
+  }
+  .photo-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .event-summary {
+    font-size: 0.85rem;
+  }
+}
